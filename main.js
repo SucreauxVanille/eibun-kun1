@@ -21,11 +21,51 @@ async function loadData() {
     generateQuestion();
 }
 
+//シャッフル
+function shuffle(array) {
+    const copy = [...array];
+
+    for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [copy[i], copy[j]] =
+        [copy[j], copy[i]];
+    }
+
+    return copy;
+}
+
 // ランダム選択
 function randomItem(array) {
     return array[
         Math.floor(Math.random() * array.length)
     ];
+}
+
+// カード生成
+function createCards() {
+
+    const container =
+        document.getElementById("cardContainer");
+
+    container.innerHTML = "";
+
+    const shuffled =
+        shuffle(currentAnswer);
+
+    shuffled.forEach(word => {
+
+        const button =
+            document.createElement("button");
+
+        button.className = "word-card";
+
+        button.textContent = word;
+
+        container.appendChild(button);
+
+    });
+
 }
 
 // 作問
@@ -45,7 +85,8 @@ function generateQuestion() {
         action.base,
         action.object
     ];
-
+createCards();
+    
     console.log(currentAnswer);
 }
 
