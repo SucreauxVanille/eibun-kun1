@@ -85,11 +85,16 @@ function generateQuestion() {
     document.getElementById("question")
         .textContent = japanese;
 
-    currentAnswer = [
-        ...subject.en,
-        action.base,
-        action.object
-    ];
+const verb =
+    subject.third
+        ? action.s
+        : action.base;
+
+currentAnswer = [
+    ...subject.en,
+    verb,
+    action.object
+];
 createCards();
     
     console.log(currentAnswer);
