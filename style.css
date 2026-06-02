@@ -82,10 +82,23 @@ body {
     transform: scale(0.95);
 }
 
-.control-area {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.control-area{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+#checkBtn{
+    width:100%;
+}
+
+.sub-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.sub-buttons button{
+    flex:1;
 }
 
 #checkBtn,
