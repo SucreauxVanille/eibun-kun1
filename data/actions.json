@@ -3,8 +3,50 @@
   "base":"play",
   "s":"plays",
   "past":"played",
+  "object":["tennis"],
+  "ja":"テニスをします"
+  },
+  {
+  "base":"watch",
+  "s":"watches",
+  "past":"watched",
+  "object":["soccer"],
+  "ja":"サッカーを見ます"
+  },
+  {
+  "base":"eat",
+  "s":"eats",
+  "past":"ate",
+  "object":["lunch"],
+  "ja":"昼食を食べます"
+  },
+  {
+  "base":"drink",
+  "s":"drinks",
+  "past":"drank",
+  "object":["tea"],
+  "ja":"紅茶を飲みます"
+  },
+  {
+  "base":"practice",
+  "s":"practices",
+  "past":"practiced",
+  "object":["soccer"],
+  "ja":"サッカーを練習します"
+  },
+  {
+  "base":"play",
+  "s":"plays",
+  "past":"played",
   "object":["baseball"],
   "ja":"野球をします"
+  },
+  {
+  "base":"play",
+  "s":"plays",
+  "past":"played",
+  "object":["the","piano"],
+  "ja":"ピアノをひきます"
   },
   {
   "base":"watch",
@@ -33,6 +75,13 @@
   "past":"made",
   "object":["breakfast"],
   "ja":"朝食を作ります"
+  },
+  {
+  "base":"write",
+  "s":"writes",
+  "past":"wrote",
+  "object":["a","letter"],
+  "ja":"手紙を書きます"
   },
   {
   "base":"use",
