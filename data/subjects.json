@@ -20,8 +20,28 @@
     "third": false
   },
   {
-  "en":["our","teacher"],
-  "ja":"私たちの先生は",
-  "third": true
+    "en": ["he"],
+    "ja": "彼は",
+    "third": true
+  },
+  {
+    "en": ["she"],
+    "ja": "彼女は",
+    "third": true
+  },
+  {
+    "en":["our","teacher"],
+    "ja":"私たちの先生は",
+    "third": true
+  },
+  {
+    "en":["your","mother"],
+    "ja":"あなたの母は",
+    "third": true
+  },
+  {
+    "en":["my","father"],
+    "ja":"私の父は",
+    "third": true
   }
 ]
