@@ -28,6 +28,13 @@
   "ja":"コーヒーを飲みます"
   },
   {
+  "base":"use",
+  "s":"uses",
+  "past":"used",
+  "object":"this","room",
+  "ja":"この部屋を使います"
+  },
+  {
   "base":"study",
   "s":"studies",
   "past":"studied",
