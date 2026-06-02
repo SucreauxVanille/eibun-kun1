@@ -175,11 +175,28 @@ function resetAnswer() {
     createCards();
 }
 
+// 次の問題
+function nextQuestion() {
+
+    selectedWords = [];
+
+    document.getElementById("result")
+        .textContent = "";
+
+    updateAnswerBox();
+
+    generateQuestion();
+}
+
 // 起動
 loadData();
+
 document
     .getElementById("checkBtn")
     .addEventListener("click", checkAnswer);
 document
     .getElementById("resetBtn")
     .addEventListener("click", resetAnswer);
+document
+    .getElementById("nextBtn")
+    .addEventListener("click", nextQuestion);
