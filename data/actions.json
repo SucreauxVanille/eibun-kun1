@@ -28,11 +28,32 @@
   "ja":"コーヒーを飲みます"
   },
   {
+  "base":"make",
+  "s":"makes",
+  "past":"made",
+  "object":"breakfast",
+  "ja":"朝食を作ります"
+  },
+  {
   "base":"use",
   "s":"uses",
   "past":"used",
-  "object":"this","room",
-  "ja":"この部屋を使います"
+  "object":["that","desk"],
+  "ja":"あの机を使います"
+  },
+  {
+  "base":"clean",
+  "s":"cleans",
+  "past":"cleaned",
+  "object":["this","room"],
+  "ja":"この部屋を掃除します"
+  },
+  {
+  "base":"speak",
+  "s":"speaks",
+  "past":"spoke",
+  "object":"English",
+  "ja":"英語を話します"
   },
   {
   "base":"study",
