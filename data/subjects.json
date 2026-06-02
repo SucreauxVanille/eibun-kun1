@@ -18,5 +18,10 @@
     "en": ["they"],
     "ja": "彼らは",
     "third": false
+  },
+  {
+  "en":["our","teacher"],
+  "ja":"私たちの先生は",
+  "third": true
   }
 ]
