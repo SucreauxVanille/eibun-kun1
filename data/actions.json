@@ -3,35 +3,35 @@
   "base":"play",
   "s":"plays",
   "past":"played",
-  "object":"baseball",
+  "object":["baseball"],
   "ja":"野球をします"
   },
   {
   "base":"watch",
   "s":"watches",
   "past":"watched",
-  "object":"TV",
+  "object":["TV"],
   "ja":"テレビを見ます"
   },
   {
   "base":"eat",
   "s":"eats",
   "past":"ate",
-  "object":"pizza",
+  "object":["pizza"],
   "ja":"ピザを食べます"
   },
   {
   "base":"drink",
   "s":"drinks",
   "past":"drank",
-  "object":"coffee",
+  "object":["coffee"],
   "ja":"コーヒーを飲みます"
   },
   {
   "base":"make",
   "s":"makes",
   "past":"made",
-  "object":"breakfast",
+  "object":["breakfast"],
   "ja":"朝食を作ります"
   },
   {
@@ -49,17 +49,24 @@
   "ja":"この部屋を掃除します"
   },
   {
+  "base":"take",
+  "s":"takes",
+  "past":"took",
+  "object":["pictures"],
+  "ja":"写真を撮ります"
+  },
+  {
   "base":"speak",
   "s":"speaks",
   "past":"spoke",
-  "object":"English",
+  "object":["English"],
   "ja":"英語を話します"
   },
   {
   "base":"study",
   "s":"studies",
   "past":"studied",
-  "object":"math",
+  "object":["math"],
   "ja":"数学を勉強します"
   }
 ]
