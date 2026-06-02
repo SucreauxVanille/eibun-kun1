@@ -93,7 +93,7 @@ const verb =
 currentAnswer = [
     ...subject.en,
     verb,
-    action.object
+    ...action.object
 ];
 createCards();
     
