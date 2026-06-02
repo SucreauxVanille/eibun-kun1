@@ -7,6 +7,13 @@
   "ja":"野球をします"
   },
   {
+  "base":"watch",
+  "s":"watches",
+  "past":"watched",
+  "object":"TV",
+  "ja":"テレビを見ます"
+  },
+  {
   "base":"eat",
   "s":"eats",
   "past":"ate",
