@@ -6,4 +6,11 @@
   "object":"baseball",
   "ja":"野球をします"
   }
+  {
+  "base":"eat",
+  "s":"eats",
+  "past":"ate",
+  "object":"pizza",
+  "ja":"ピザを食べます"
+  }
 ]
