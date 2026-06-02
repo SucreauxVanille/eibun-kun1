@@ -112,7 +112,10 @@ body {
     background: #ff9800;
     color: white;
 }
-
+#nextBtn {
+    background: #2196f3;
+    color: white;
+}
 #result {
     margin-top: 20px;
     text-align: center;
