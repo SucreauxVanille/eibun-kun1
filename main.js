@@ -52,8 +52,14 @@ function createCards() {
 
     container.innerHTML = "";
 
-    currentCards =
-        shuffle(currentAnswer);
+const dummyWords =
+    getDummyWords(2);
+
+currentCards =
+    shuffle([
+        ...currentAnswer,
+        ...dummyWords
+    ]);
 
     currentCards.forEach(word => {
 
@@ -71,6 +77,36 @@ function createCards() {
 
     });
 
+}
+
+// ダミーカード
+function getDummyWords(count = 2) {
+
+    let allWords = [];
+
+    subjects.forEach(subject => {
+        allWords.push(...subject.en);
+    });
+
+    actions.forEach(action => {
+
+        allWords.push(action.base);
+        allWords.push(action.s);
+
+        allWords.push(...action.object);
+    });
+
+    const uniqueWords =
+        [...new Set(allWords)];
+
+    const dummyCandidates =
+        uniqueWords.filter(
+            word =>
+            !currentAnswer.includes(word)
+        );
+
+    return shuffle(dummyCandidates)
+        .slice(0, count);
 }
 
 // 作問
