@@ -3,6 +3,7 @@ let actions = [];
 
 let currentAnswer = [];
 let selectedWords = [];
+let currentCards = [];
 
 // JSON読込
 async function loadData() {
@@ -51,10 +52,10 @@ function createCards() {
 
     container.innerHTML = "";
 
-    const shuffled =
+    currentCards =
         shuffle(currentAnswer);
 
-    shuffled.forEach(word => {
+    currentCards.forEach(word => {
 
         const button =
             document.createElement("button");
@@ -133,6 +134,7 @@ function updateAnswerBox() {
         sentence;
 }
 
+
 //判定
 function checkAnswer() {
 
@@ -165,6 +167,9 @@ function resetAnswer() {
 
     selectedWords = [];
 
+    document.getElementById("result")
+        .textContent = "";
+
     updateAnswerBox();
 
     createCards();
@@ -175,3 +180,6 @@ loadData();
 document
     .getElementById("checkBtn")
     .addEventListener("click", checkAnswer);
+document
+    .getElementById("resetBtn")
+    .addEventListener("click", resetAnswer);
