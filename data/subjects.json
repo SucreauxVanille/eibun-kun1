@@ -8,5 +8,10 @@
     "en": ["we"],
     "ja": "私たちは",
     "third": false
+  },
+  {
+    "en": ["thet"],
+    "ja": "彼らは",
+    "third": false
   }
 ]
