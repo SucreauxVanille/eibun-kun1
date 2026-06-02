@@ -5,6 +5,11 @@
     "third": false
   },
   {
+    "en": ["you"],
+    "ja": "あなたは",
+    "third": false
+  },
+  {
     "en": ["we"],
     "ja": "私たちは",
     "third": false
