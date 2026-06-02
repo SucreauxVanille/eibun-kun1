@@ -19,5 +19,19 @@
   "past":"ate",
   "object":"pizza",
   "ja":"ピザを食べます"
+  },
+  {
+  "base":"drink",
+  "s":"drinks",
+  "past":"drank",
+  "object":"coffee",
+  "ja":"コーヒーを飲みます"
+  },
+  {
+  "base":"study",
+  "s":"studies",
+  "past":"studied",
+  "object":"math",
+  "ja":"数学を勉強します"
   }
 ]
