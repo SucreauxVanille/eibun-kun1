@@ -92,7 +92,7 @@ function getDummyWords(count = 2) {
 
         allWords.push(action.base);
         allWords.push(action.s);
-
+        allWords.push(action.past);
         allWords.push(...action.object);
     });
 
