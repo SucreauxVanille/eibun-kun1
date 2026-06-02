@@ -22,7 +22,20 @@ async function loadData() {
 
     generateQuestion();
 }
-
+// 機能語
+const functionWords = [
+    "a",
+    "an",
+    "the",
+    "this",
+    "that",
+    "my",
+    "your",
+    "his",
+    "her",
+    "our",
+    "their"
+];
 //シャッフル
 function shuffle(array) {
     const copy = [...array];
@@ -99,11 +112,13 @@ function getDummyWords(count = 2) {
     const uniqueWords =
         [...new Set(allWords)];
 
-    const dummyCandidates =
-        uniqueWords.filter(
-            word =>
+const dummyCandidates =
+    uniqueWords.filter(
+        word =>
             !currentAnswer.includes(word)
-        );
+            &&
+            !functionWords.includes(word)
+    );
 
     return shuffle(dummyCandidates)
         .slice(0, count);
