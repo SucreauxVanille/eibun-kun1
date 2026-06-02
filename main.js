@@ -111,20 +111,38 @@ function getDummyWords(count = 2) {
 
 // 作問
 function generateQuestion() {
-
+const tense =
+    Math.random() < 0.5
+        ? "present"
+        : "past";
     const subject = randomItem(subjects);
     const action = randomItem(actions);
 
-    const japanese =
-        subject.ja + action.ja;
+let actionJa = action.ja;
 
+if (tense === "past") {
+    actionJa =
+        actionJa.replace("ます", "ました");
+}
+
+const japanese =
+    subject.ja + actionJa;
     document.getElementById("question")
         .textContent = japanese;
 
-const verb =
-    subject.third
-        ? action.s
-        : action.base;
+let verb;
+
+if (tense === "past") {
+
+    verb = action.past;
+
+} else {
+
+    verb =
+        subject.third
+            ? action.s
+            : action.base;
+}
 
 currentAnswer = [
     ...subject.en,
