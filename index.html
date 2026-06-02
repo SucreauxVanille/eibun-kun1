@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Order Master</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>英語語順マスター</h1>
+
+        <!-- 問題表示 -->
+        <div class="question-area">
+            <h2>問題</h2>
+            <div id="question">
+                あなたは野球をします
+            </div>
+        </div>
+
+        <!-- 解答欄 -->
+        <div class="answer-area">
+            <h2>解答</h2>
+            <div id="answerBox">
+                <span class="placeholder">
+                    単語カードをタップしてください
+                </span>
+            </div>
+        </div>
+
+        <!-- 単語カード -->
+        <div class="cards-area">
+            <h2>単語カード</h2>
+
+            <div id="cardContainer">
+
+                <button class="word-card">I</button>
+                <button class="word-card">you</button>
+                <button class="word-card">play</button>
+                <button class="word-card">watch</button>
+                <button class="word-card">baseball</button>
+                <button class="word-card">tennis</button>
+
+            </div>
+        </div>
+
+        <!-- 判定 -->
+        <div class="control-area">
+            <button id="checkBtn">判定</button>
+            <button id="resetBtn">リセット</button>
+        </div>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
