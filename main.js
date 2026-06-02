@@ -2,6 +2,7 @@ let subjects = [];
 let actions = [];
 
 let currentAnswer = [];
+let selectedWords = [];
 
 // JSON読込
 async function loadData() {
@@ -61,7 +62,10 @@ function createCards() {
         button.className = "word-card";
 
         button.textContent = word;
-
+        
+    button.addEventListener("click", () => {
+        selectWord(word, button);
+    });
         container.appendChild(button);
 
     });
@@ -90,5 +94,84 @@ createCards();
     console.log(currentAnswer);
 }
 
+// カード選択
+function selectWord(word, button) {
+
+    selectedWords.push(word);
+
+    updateAnswerBox();
+
+    button.disabled = true;
+}
+//解答欄
+function updateAnswerBox() {
+
+    const answerBox =
+        document.getElementById("answerBox");
+
+    answerBox.innerHTML = "";
+
+    if (selectedWords.length === 0) {
+
+        answerBox.innerHTML =
+            '<span class="placeholder">単語カードをタップしてください</span>';
+
+        return;
+    }
+
+    let displayWords =
+        [...selectedWords];
+
+    displayWords[0] =
+        displayWords[0].charAt(0).toUpperCase()
+        + displayWords[0].slice(1);
+
+    const sentence =
+        displayWords.join(" ") + ".";
+
+    answerBox.textContent =
+        sentence;
+}
+
+//判定
+function checkAnswer() {
+
+    const correct =
+        selectedWords.length === currentAnswer.length
+        &&
+        selectedWords.every(
+            (word, index) =>
+                word === currentAnswer[index]
+        );
+
+    const result =
+        document.getElementById("result");
+
+    if (correct) {
+
+        result.textContent =
+            "⭕ 正解！";
+
+    } else {
+
+        result.textContent =
+            "❌ もう一度挑戦！";
+
+    }
+
+}
+// リセット
+function resetAnswer() {
+
+    selectedWords = [];
+
+    updateAnswerBox();
+
+    createCards();
+}
+
 // 起動
 loadData();
+document
+    .getElementById("checkBtn")
+    .addEventListener("click", checkAnswer);
