@@ -65,12 +65,10 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
 
-    border: none;
+    background: #eef4ff;
+    color: #333;
+    border: 2px solid #c7dafc;
     border-radius: 10px;
-
-    background: #4f8cff;
-    color: white;
-
     cursor: pointer;
 
     transition: 0.2s;
@@ -91,7 +89,8 @@ body {
 }
 
 #checkBtn,
-#resetBtn {
+#resetBtn,
+#nextBtn{
     padding: 12px 24px;
 
     font-size: 1rem;
