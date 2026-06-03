@@ -22,7 +22,7 @@ async function loadData() {
 
     generateQuestion();
 }
-// 機能語
+// 機能語と固有名詞
 const functionWords = [
     "a",
     "an",
@@ -34,7 +34,11 @@ const functionWords = [
     "his",
     "her",
     "our",
-    "their"
+    "their",
+    "to",
+    "Tom",
+    "Ken",
+    "Mary"    
 ];
 //シャッフル
 function shuffle(array) {
