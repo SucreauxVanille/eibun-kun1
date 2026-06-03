@@ -46,6 +46,9 @@ body {
     border-radius: 10px;
 
     background: #fafafa;
+
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .placeholder {
