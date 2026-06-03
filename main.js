@@ -189,7 +189,7 @@ function updateAnswerBox() {
     if (selectedWords.length === 0) {
 
         answerBox.innerHTML =
-            '<span class="placeholder">単語カードをタップしてください</span>';
+            '<span class="placeholder">単語カードをえらぼう</span>';
 
         return;
     }
