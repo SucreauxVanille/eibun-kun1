@@ -132,16 +132,14 @@ const dummyCandidates =
 function generateQuestion() {
 
 // 文の種類
-    const tense =
-        Math.random() < 0.5
-        ? "present"
-        : "past";    
-
-    const isNegative =
-    　tense === "present"
-    　&&
-    　Math.random() < 0.3;
-
+const sentenceType =
+    randomItem([
+        "present",
+        "past",
+        "negative",
+        "pastNegative"
+    ]);
+    
 // 使用単語
 const subject =
     randomItem(subjects);
@@ -152,26 +150,33 @@ const action =
 // 日本語文
 let actionJa = action.ja;
 
-if (tense === "past") {
+if (sentenceType === "past") {
+
     actionJa =
-        actionJa.replace(
-            "ます",
-            "ました"
-        );
+        actionJa.replace("ます", "ました");
+
 }
-else if (isNegative) {
+else if (sentenceType === "negative") {
+
+    actionJa =
+        actionJa.replace("ます", "ません");
+
+}
+else if (sentenceType === "pastNegative") {
+
     actionJa =
         actionJa.replace(
             "ます",
-            "ません"
+            "ませんでした"
         );
+
 }
 document.getElementById("question")
     .textContent =
     subject.ja + actionJa;
 
 // 英文作成
-if (isNegative) {
+if (sentenceType === "negative") {
 
     const helper =
         subject.third
@@ -186,11 +191,23 @@ if (isNegative) {
     ];
 
 }
+else if (
+    sentenceType === "pastNegative"
+) {
+
+    currentAnswer = [
+        ...subject.en,
+        "didn't",
+        action.base,
+        ...action.object
+    ];
+
+}
 else {
 
     let verb;
 
-    if (tense === "past") {
+    if (sentenceType === "past") {
 
         verb = action.past;
 
