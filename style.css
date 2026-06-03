@@ -15,26 +15,26 @@ body {
 .cards-area {
     background: white;
     border-radius: 12px;
-    padding: 12px;
-    margin-bottom: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .section-label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #666;
     margin-bottom: 8px;
 }
 
 #question {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
-    padding: 15px;
+    padding: 12px;
 }
 
 #answerBox {
-    min-height: 70px;
+    min-height: 60px;
 
     display: flex;
     flex-wrap: wrap;
