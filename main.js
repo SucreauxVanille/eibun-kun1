@@ -126,46 +126,47 @@ const dummyCandidates =
 
 // 作問
 function generateQuestion() {
-const tense =
-    Math.random() < 0.5
+
+// 文の種類
+    const tense =
+        Math.random() < 0.5
         ? "present"
-        : "past";
-const isNegative =
-    Math.random() < 0.3;
-    
-    const subject = randomItem(subjects);
-    const action = randomItem(actions);
+        : "past";    
 
+    const isNegative =
+    　tense === "present"
+    　&&
+    　Math.random() < 0.3;
+
+// 使用単語
+const subject =
+    randomItem(subjects);
+
+const action =
+    randomItem(actions);
+
+// 日本語文
 let actionJa = action.ja;
-    const japanese =
-    subject.ja + action.ja;
-    document.getElementById("question")
-        .textContent = japanese;
-    
-if (tense === "past") {
-    actionJa =
-        actionJa.replace("ます", "ました");
-}
-if (isNegative) {
-
-    actionJa =
-        actionJa.replace("ます", "ません");
-
-}
-
-let verb;
 
 if (tense === "past") {
-
-    verb = action.past;
-
-} else {
-
-    verb =
-        subject.third
-            ? action.s
-            : action.base;
+    actionJa =
+        actionJa.replace(
+            "ます",
+            "ました"
+        );
 }
+else if (isNegative) {
+    actionJa =
+        actionJa.replace(
+            "ます",
+            "ません"
+        );
+}
+document.getElementById("question")
+    .textContent =
+    subject.ja + actionJa;
+
+// 英文作成
 if (isNegative) {
 
     const helper =
@@ -181,13 +182,30 @@ if (isNegative) {
     ];
 
 }
-currentAnswer = [
-    ...subject.en,
-    verb,
-    ...action.object
-];
-createCards();
-    
+else {
+
+    let verb;
+
+    if (tense === "past") {
+
+        verb = action.past;
+
+    } else {
+
+        verb =
+            subject.third
+                ? action.s
+                : action.base;
+    }
+
+    currentAnswer = [
+        ...subject.en,
+        verb,
+        ...action.object
+    ];
+}
+// カード生成
+    createCards();
     console.log(currentAnswer);
 }
 
