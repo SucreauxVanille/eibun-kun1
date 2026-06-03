@@ -35,6 +35,13 @@
   "ja":"サッカーを練習します"
   },
   {
+  "base":"practice",
+  "s":"practices",
+  "past":"practiced",
+  "object":["basketball"],
+  "ja":"バスケを練習します"
+  },
+  {
   "base":"play",
   "s":"plays",
   "past":"played",
@@ -45,8 +52,22 @@
   "base":"play",
   "s":"plays",
   "past":"played",
+  "object":["the","guitar"],
+  "ja":"ギターをひきます"
+  },
+  {
+  "base":"play",
+  "s":"plays",
+  "past":"played",
   "object":["the","piano"],
   "ja":"ピアノをひきます"
+  },
+  {
+  "base":"sing",
+  "s":"sings",
+  "past":"sang",
+  "object":["a","song"],
+  "ja":"歌を歌います"
   },
   {
   "base":"watch",
@@ -77,6 +98,13 @@
   "ja":"朝食を作ります"
   },
   {
+  "base":"make",
+  "s":"makes",
+  "past":"made",
+  "object":["dinner"],
+  "ja":"夕食を作ります"
+  },
+  {
   "base":"write",
   "s":"writes",
   "past":"wrote",
@@ -89,6 +117,20 @@
   "past":"used",
   "object":["that","desk"],
   "ja":"あの机を使います"
+  },
+    {
+  "base":"use",
+  "s":"uses",
+  "past":"used",
+  "object":["this","computer"],
+  "ja":"このコンピューターを使います"
+  },
+  {
+  "base":"open",
+  "s":"opens",
+  "past":"opened",
+  "object":["the","window"],
+  "ja":"窓を開けます"
   },
   {
   "base":"clean",
@@ -103,6 +145,20 @@
   "past":"took",
   "object":["pictures"],
   "ja":"写真を撮ります"
+  },
+    {
+  "base":"listen",
+  "s":"listens",
+  "past":"listened",
+  "object":["to","music"],
+  "ja":"音楽を聴きます"
+  },
+  {
+  "base":"call",
+  "s":"calls",
+  "past":"called",
+  "object":["Tom"],
+  "ja":"トムを呼びます"
   },
   {
   "base":"speak",
