@@ -130,20 +130,26 @@ const tense =
     Math.random() < 0.5
         ? "present"
         : "past";
+const isNegative =
+    Math.random() < 0.3;
+    
     const subject = randomItem(subjects);
     const action = randomItem(actions);
 
 let actionJa = action.ja;
-
+    document.getElementById("question")
+        .textContent = japanese;
+    
 if (tense === "past") {
     actionJa =
         actionJa.replace("ます", "ました");
 }
+if (isNegative) {
 
-const japanese =
-    subject.ja + actionJa;
-    document.getElementById("question")
-        .textContent = japanese;
+    actionJa =
+        actionJa.replace("ます", "ません");
+
+}
 
 let verb;
 
@@ -158,7 +164,21 @@ if (tense === "past") {
             ? action.s
             : action.base;
 }
+if (isNegative) {
 
+    const helper =
+        subject.third
+            ? "doesn't"
+            : "don't";
+
+    currentAnswer = [
+        ...subject.en,
+        helper,
+        action.base,
+        ...action.object
+    ];
+
+}
 currentAnswer = [
     ...subject.en,
     verb,
