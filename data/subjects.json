@@ -43,5 +43,35 @@
     "en":["my","father"],
     "ja":"私の父は",
     "third": true
+  },
+  {
+    "en":["his","mother"],
+    "ja":"彼の母は",
+    "third": true
+  },
+  {
+    "en":["her","father"],
+    "ja":"彼女の父は",
+    "third": true
+  },
+  {
+    "en":["your","brother"],
+    "ja":"あなたの弟は",
+    "third": true
+  },
+  {
+    "en":["my","sister"],
+    "ja":"私の姉は",
+    "third": true
+  },
+  {
+    "en":["Mary"],
+    "ja":"メアリーは",
+    "third": true
+  },
+  {
+    "en":["Ken"],
+    "ja":"ケンは",
+    "third": true
   }
 ]
