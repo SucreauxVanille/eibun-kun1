@@ -137,6 +137,8 @@ const isNegative =
     const action = randomItem(actions);
 
 let actionJa = action.ja;
+    const japanese =
+    subject.ja + action.ja;
     document.getElementById("question")
         .textContent = japanese;
     
